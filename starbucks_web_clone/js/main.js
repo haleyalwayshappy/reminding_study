@@ -8,3 +8,8 @@ searchEl.addEventListener('click', function (){
   searchInputEl.focus();
   
 });
+
+searchInputEl.addEventListener('focus',function(){
+  searchEl.classList.add();
+
+});
