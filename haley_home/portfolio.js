@@ -28,6 +28,6 @@ function scrollFunction() {
 
 function menuToggle() {
   document.getElementById("menu").classList.toggle("show");
-}
+} 
 
 document.getElementById("toggleBtn").addEventListener("click", menuToggle);
