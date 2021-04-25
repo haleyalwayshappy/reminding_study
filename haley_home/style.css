@@ -162,21 +162,68 @@ ul {
   .header-area > .navbar > .navbar-menu.show {
     height: auto;
   }
-  .header-area > .navbar > .navbar-menu > .nav-item  {
-  display: inline-block;
-  height :70px;
-  line-height:70px;
+  .header-area > .navbar > .navbar-menu > .nav-item {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
   }
-  .header-area > .navbar > .navbar-menu > .nav-item:hover *{
+  .header-area > .navbar > .navbar-menu > .nav-item:hover * {
     background-color: transparent;
   }
-  .header-area > .navbar > .navbar-menu > .nav-item > .nav-link{
-    display :block;
-    padding : 0 20px;
+  .header-area > .navbar > .navbar-menu > .nav-item > .nav-link {
+    display: block;
+    padding: 0 20px;
     color: #333;
   }
 
-
+  /* SECTION CONTAINER */
+  .section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+/* WELCOME AREA */
+.welcome-area {
+  height: auto;
 }
 
+.welcome-area > .container {
+  position: relative;
+  height: 100%;
+}
 
+.welcome-area > .container > .image-slide {
+  height: 100%;
+}
+
+.welcome-area > .container > .image-prev,
+.welcome-area > .container > .image-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18 px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.welcome-area > .container > .image-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.welcome-area > .container > .image-prev:hover,
+.welcome-area > .container > .image-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.welcome-area > .container> .dots{
+  position : absolute;
+  width :100%;
+  bottom : 10px;
+  text-align : center;
+}
