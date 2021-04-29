@@ -42,17 +42,17 @@ showImageSlides(imageSlideIndex);
 function imageSlideTimer(){
   plusImageSlides(1);
 }
-var imageTimer=setInterval(imageSlideTimer,3000); //초설정
+var imageTimer=setInterval(imageSlideTimer,4500); //초설정
 
 
 function plusImageSlides(n){
   clearInterval(imageTimer);
-  imageTimer =setInterval(imageSlideTimer,3000);
+  imageTimer =setInterval(imageSlideTimer,4500);
   showImageSlides(imageSlideIndex += n);
 }
 function currentImageSlide(n){
   clearInterval(imageTimer);
-  imageTimer =setInterval(imageSlideTimer,3000);
+  imageTimer =setInterval(imageSlideTimer,4500);
   showImageSlides(imageSlideIndex = n);
 
 
@@ -84,3 +84,4 @@ document.getElementById('firstDot').addEventListener('click',currentImageSlide.b
 document.getElementById('secondDot').addEventListener('click',currentImageSlide.bind(null,2));
 document.getElementById('thirdDot').addEventListener('click',currentImageSlide.bind(null,3));
 document.getElementById('forthDot').addEventListener('click',currentImageSlide.bind(null,4));
+document.getElementById('fifthDot').addEventListener('click',currentImageSlide.bind(null,5));
