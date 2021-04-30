@@ -85,3 +85,25 @@ document.getElementById('secondDot').addEventListener('click',currentImageSlide.
 document.getElementById('thirdDot').addEventListener('click',currentImageSlide.bind(null,3));
 document.getElementById('forthDot').addEventListener('click',currentImageSlide.bind(null,4));
 document.getElementById('fifthDot').addEventListener('click',currentImageSlide.bind(null,5));
+
+
+/*PORTFOLIO AREA*/
+
+function filterSelection(id){
+var x,i;
+x =document.getElementsByClassName('listItem');
+for(i=0;i<x.length;i++){
+  removeClass(x[i],'active');
+}
+addClass(document.getElementById(id),'active');
+
+}
+
+function addClass(element,name){
+
+}
+
+function removeClass(element, name){
+
+
+}
