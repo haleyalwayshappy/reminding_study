@@ -1,36 +1,36 @@
 /* HEADER */
 window.onload = function () {
-  scrollFunction();
+  scrollFunction()
 };
 window.onscroll = function () {
-  scrollFunction();
+  scrollFunction()
 };
 
 function scrollFunction() {
-  var header = document.getElementById("header");
+  var header = document.getElementById('header');
 
   if (document.documentElement.scrollTop > 70) {
-    if (!header.classList.contains("navbar-fixed")) {
-      header.classList.add("navbar-fixed");
-      document.getElementsByTagName("body")[0].style.marginTop = "70px";
-      header.style.display = "none";
+    if (!header.classList.contains('navbar-fixed')) {
+      header.classList.add('navbar-fixed');
+      document.getElementsByTagName('body')[0].style.marginTop = '70px';
+      header.style.display = 'none';
       setTimeout(function () {
-        header.style.display = "block";
+        header.style.display = 'block';
       }, 40);
     }
   } else {
-    if (header.classList.contains("navbar-fixed")) {
-      header.classList.remove("navbar-fixed");
-      document.getElementsByTagName("body")[0].style.marginTop = "0";
+    if (header.classList.contains('navbar-fixed')) {
+      header.classList.remove('navbar-fixed');
+      document.getElementsByTagName('body')[0].style.marginTop = '0';
     }
   }
 }
 
 function menuToggle() {
-  document.getElementById("menu").classList.toggle("show");
+  document.getElementById('menu').classList.toggle('show');
 }
 
-document.getElementById("toggleBtn").addEventListener("click", menuToggle);
+document.getElementById('toggleBtn').addEventListener('click', menuToggle);
 
 /*welcome area*/
 
@@ -61,8 +61,8 @@ function currentImageSlide(n) {
 
 function showImageSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("image-slide");
-  var dots = document.getElementsByClassName("dot");
+  var slides = document.getElementsByClassName('image-slide');
+  var dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     imageSlideIndex = 1
   }
@@ -70,13 +70,13 @@ function showImageSlides(n) {
     imageSlideIndex = slides.length
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(' active', '');
   }
-  slides[imageSlideIndex - 1].style.display = "block";
-  dots[imageSlideIndex - 1].className += " active";
+  slides[imageSlideIndex - 1].style.display = 'block';
+  dots[imageSlideIndex - 1].className += ' active';
 }
 //옆으로 누르기 했을때 넘어가는 터치리스너
 document.getElementById('imagePrev').addEventListener('click', plusImageSlides.bind(null, -1));
@@ -98,6 +98,7 @@ function filterSelection(id) {
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], 'active');
   }
+
   addClass(document.getElementById(id), 'active');
   x = document.getElementsByClassName('filterItem');
   if (id == 'all') id = '';
@@ -111,23 +112,22 @@ function filterSelection(id) {
 
 function addClass(element, name) {
   if (element.className.indexOf(name) == -1) {
-    element.className += " " + name;
+    element.className += ' ' + name;
   }
 }
 
 function removeClass(element, name) {
-
   var arr;
-  arr = element.className.split(" ");
+  arr = element.className.split(' ');
   while (arr.indexOf(name) > -1) {
     arr.splice(arr.indexOf(name), 1);
   }
-  element.className = arr.join(" ");
-
+  element.className = arr.join(' ');
 }
+
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
-document.getElementById('uiux').addEventListener('click', filterSelection.bind(null, 'uiux'));
-document.getElementById('java').addEventListener('click', filterSelection.bind(null, 'java'));
+document.getElementById('android').addEventListener('click', filterSelection.bind(null, 'android'));
+document.getElementById('flutter').addEventListener('click', filterSelection.bind(null, 'flutter'));
 document.getElementById('music').addEventListener('click', filterSelection.bind(null, 'music'));
 
 
@@ -138,8 +138,8 @@ function viewPortfolio(event) {
   }
   var overlayNode = polyNode;
   var imageNode = overlayNode.nextElementSibling;
-  var itemNode = overlayNode.parentNode;
 
+  var itemNode = overlayNode.parentNode;
   var mainNode = itemNode.nextElementSibling;
   var subNode = mainNode.nextElementSibling;
   var textNode = subNode.nextElementSibling;

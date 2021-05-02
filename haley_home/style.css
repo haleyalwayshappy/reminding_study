@@ -72,7 +72,7 @@ ul {
   }
 }
 
-.header-area.navbar-fixed {
+.header-area.navbar-fade {
   position: fixed;
 }
 
@@ -498,7 +498,7 @@ section {
 
 .portfolio-area>.container>.filterItem {
   display: none;
-  display: none;
+
   width: calc(100%-40px);
   margin: 20px;
   text-align: center;
@@ -521,7 +521,7 @@ section {
 
 @media(min-width:992px) {
   .portfolio-area>.container>.filterItem>.image {
-    height: 500px;
+    height: 300px;
   }
 }
 
@@ -571,7 +571,7 @@ section {
 }
 
 #portfolioModal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 100;
   left: 0;
@@ -613,7 +613,8 @@ section {
 
 @media (min-width:992px) {
   #portfolioModal>.container>img {
-    max-width: 500px;
+    max-width: 700px;
+
   }
 }
 
