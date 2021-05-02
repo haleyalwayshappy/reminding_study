@@ -448,9 +448,10 @@ section {
 }
 
 .services-area>.container>.item>.icon>span>i {
-  font-size: 48px;
+  font-size: 64px;
   color: rgb(90, 90, 90);
 }
+
 
 .services-area>.container>.item>.service {
   font-size: 32px;
@@ -496,8 +497,8 @@ section {
 }
 
 .portfolio-area>.container>.filterItem {
-  display:none;
-  display:none;
+  display: none;
+  display: none;
   width: calc(100%-40px);
   margin: 20px;
   text-align: center;
