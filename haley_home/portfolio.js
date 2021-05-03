@@ -1,10 +1,11 @@
-/* HEADER */
+/*HEADER*/
 window.onload = function () {
   scrollFunction()
 };
 window.onscroll = function () {
   scrollFunction()
 };
+
 
 function scrollFunction() {
   var header = document.getElementById('header');
@@ -28,9 +29,11 @@ function scrollFunction() {
 
 function menuToggle() {
   document.getElementById('menu').classList.toggle('show');
+
 }
 
 document.getElementById('toggleBtn').addEventListener('click', menuToggle);
+
 
 /*welcome area*/
 
