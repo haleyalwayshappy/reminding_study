@@ -131,6 +131,7 @@ function removeClass(element, name) {
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
 document.getElementById('android').addEventListener('click', filterSelection.bind(null, 'android'));
 document.getElementById('flutter').addEventListener('click', filterSelection.bind(null, 'flutter'));
+document.getElementById('web').addEventListener('click', filterSelection.bind(null, 'web'));
 document.getElementById('music').addEventListener('click', filterSelection.bind(null, 'music'));
 
 

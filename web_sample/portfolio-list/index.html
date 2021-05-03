@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+
+  <!-- user style  -->
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <header class="header-area navbar-fade" id="header">
+    <nav class="navbar">
+      <a class="navbar-brand" id="navbarBrand">logo</a>
+      <a class="navbar-toggler" id="toggleBtn"><i class="fa fa-bars"></i></a>
+      <div class="navbar-menu" id="menu">
+        <div class="nav-item">
+          <a class="nav-link" id="navbarAbout">about</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" id="navbarService">service</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" id="navbarPortfolio">portfolio</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" id="navbarReview">review</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="portfolio-area" id="portfolio">
+    <div class="title">PORTFOLIO</div>
+    <div class="filter">
+      <ul class="list">
+        <li class="listItem active" id="all">all</li>
+        <li class="listItem" id="uiux">uiux</li>
+        <li class="listItem" id="java">java</li>
+        <li class="listItem" id="db">db</li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="filterItem java">
+        <div class="image">
+          <div class="overlay"><i class="far fa-image"></i></div>
+          <img src="./image/music_pf1.jpg" alt="">
+        </div>
+        <div class="main">메인 제목</div>
+        <div class="sub">부제목</div>
+        <div class="text">상세설명</div>
+      </div>
+      
+      <div class="filterItem db">
+        <div class="image">
+          <div class="overlay"><i class="far fa-image"></i></div>
+          <img src="./image/music_pf2.jpg" alt="">
+        </div>
+        <div class="main">메인 제목</div>
+        <div class="sub">부제목</div>
+        <div class="text">상세설명</div>
+      </div>
+
+      <div class="filterItem uiux">
+        <div class="image">
+          <div class="overlay"><i class="far fa-image"></i></div>
+          <img src="./image/music_pf3.jpg" alt="">
+        </div>
+        <div class="main">메인 제목</div>
+        <div class="sub">부제목</div>
+        <div class="text">상세설명</div>
+      </div>
+      erItem">
+        <div class="image java db">
+          <div class="overlay"><i class="far fa-image"></i></div>
+          <img src="./image/music_pf4.jpg" alt="">
+        </div>
+        <div class="main">메인 제목</div>
+        <div class="sub">부제목</div>
+        <div class="text">상세설명</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
