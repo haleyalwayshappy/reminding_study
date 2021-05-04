@@ -565,6 +565,9 @@ section {
   border-radius: 5px;
 }
 
+.portfolio-area>.container>.filterItem>.video{
+  display:none;
+}
 .portfolio-area>.container>.filterItem>.main {
   font-size: 24px;
   font-weight: bold;
@@ -616,13 +619,13 @@ section {
   height: auto;
 }
 
-#portfolioModal>.container>img {
+#portfolioModal>.container>iframe {
   width: calc(100%-40px);
   padding: 20px;
 }
 
 @media (min-width:992px) {
-  #portfolioModal>.container>img {
+  #portfolioModal>.container>iframe{
     max-width: 700px;
 
   }

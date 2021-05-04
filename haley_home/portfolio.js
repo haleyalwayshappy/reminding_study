@@ -91,8 +91,7 @@ document.getElementById('thirdDot').addEventListener('click', currentImageSlide.
 document.getElementById('forthDot').addEventListener('click', currentImageSlide.bind(null, 4));
 document.getElementById('fifthDot').addEventListener('click', currentImageSlide.bind(null, 5));
 
-
-/*PORTFOLIO AREA*/
+/* PORTFOLIO SECTION */
 filterSelection('all');
 
 function filterSelection(id) {
@@ -115,17 +114,17 @@ function filterSelection(id) {
 
 function addClass(element, name) {
   if (element.className.indexOf(name) == -1) {
-    element.className += ' ' + name;
+    element.className += " " + name;
   }
 }
 
 function removeClass(element, name) {
   var arr;
-  arr = element.className.split(' ');
+  arr = element.className.split("");
   while (arr.indexOf(name) > -1) {
     arr.splice(arr.indexOf(name), 1);
   }
-  element.className = arr.join(' ');
+  element.className = arr.join("");
 }
 
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
@@ -134,26 +133,27 @@ document.getElementById('flutter').addEventListener('click', filterSelection.bin
 document.getElementById('web').addEventListener('click', filterSelection.bind(null, 'web'));
 document.getElementById('music').addEventListener('click', filterSelection.bind(null, 'music'));
 
-
 function viewPortfolio(event) {
   var polyNode = event.target;
+
   if (polyNode.tagName.toLowerCase() == 'i') {
     polyNode = polyNode.parentNode;
   }
+
   var overlayNode = polyNode;
-  var imageNode = overlayNode.nextElementSibling;
+  var videoNode = overlayNode.nextElementSibling;
 
   var itemNode = overlayNode.parentNode;
   var mainNode = itemNode.nextElementSibling;
   var subNode = mainNode.nextElementSibling;
   var textNode = subNode.nextElementSibling;
 
-  document.getElementById('modalImage').src = imageNode.src;
-  document.getElementById('modalMain').src = mainNode.innerHTML;
-  document.getElementById('modalSub').src = subNode.innerHTML;
-  document.getElementById('modalText').src = textNode.innerHTML;
+  document.getElementById('modalVideo').src = videoNode.src;
+  document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
+  document.getElementById('modalSub').innerHTML = subNode.innerHTML;
+  document.getElementById('modalText').innerHTML = textNode.innerHTML;
 
-  document.getElementById('portfolioModal').style.display = 'block';
+ document.getElementById('portfolioModal').style.display='block';
 }
 
 document.getElementById('modalClose').addEventListener('click', function () {
