@@ -157,7 +157,9 @@ function viewPortfolio(event) {
 }
 
 document.getElementById('modalClose').addEventListener('click', function () {
-  document.getElementById('portfolioModal').style.display = 'none';
+ document.getElementById('portfolioModal').style.display = 'none';
+  document.getElementById('modalVideo').
+
 });
 
 var filterItems = document.getElementsByClassName('overlay');
