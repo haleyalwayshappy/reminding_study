@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .gray_mask {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    #popup {
+      display: none;
+      position: absolute;
+    }
+  </style>
+
+</head>
+
+<body>
+  <a class="pop_open" href="#">PLAY</a>
+  <div class="gray_mask"></div>
+  <div id="popup"> <a class="close" href="#">CLOSE</a>
+    <div class="youtube">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/d8KfcLqEXkk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="portfolio.js">
+      </script>
+</body>
+
+</html>

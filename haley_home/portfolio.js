@@ -35,6 +35,7 @@ function menuToggle() {
 document.getElementById('toggleBtn').addEventListener('click', menuToggle);
 
 
+
 /*welcome area*/
 
 var imageSlideIndex = 1;
@@ -102,6 +103,7 @@ function filterSelection(id) {
   }
 
   addClass(document.getElementById(id), 'active');
+  
   x = document.getElementsByClassName('filterItem');
   if (id == 'all') id = '';
   for (i = 0; i < x.length; i++) {
@@ -156,14 +158,38 @@ function viewPortfolio(event) {
  document.getElementById('portfolioModal').style.display='block';
 }
 
-document.getElementById('modalClose').addEventListener('click', function () {
- document.getElementById('portfolioModal').style.display = 'none';
-  document.getElementById('modalVideo').
-
-});
 
 var filterItems = document.getElementsByClassName('overlay');
 
 for (var i = 0; i < filterItems.length; i++) {
   filterItems[i].addEventListener('click', viewPortfolio);
 }
+
+$('#modalClose').on('click', function(){ //레이어 닫을때
+  $('#portfolioModal').hide();
+  $('#modalMain').empty();  
+});
+
+// X표시를 눌렀을때 실행되는 코드
+// document.getElementById('modalClose').addEventListener('click', function () {
+//  document.getElementById('portfolioModal').style.display = 'none';
+//  });
+
+
+
+/*NAVBAR ANCHOR */
+function moveTo(id){
+  if(id=='brand'){
+    window.scrollTo(0,0);
+  }else{
+    window.scrollTo(0,document.getElementById(id).offsetTop-70);
+  }
+  document.getElementById('menu').classList.remove('show');
+
+}
+
+document.getElementById('navbarBrand').addEventListener('click',moveTo.bind(null,'brand'));
+document.getElementById('navbarAbout').addEventListener('click',moveTo.bind(null,'about'));
+document.getElementById('navbarService').addEventListener('click',moveTo.bind(null,'service'));
+document.getElementById('navbarPortfolio').addEventListener('click',moveTo.bind(null,'portfolio'));
+document.getElementById('navbarContact').addEventListener('click',moveTo.bind(null,'contact'));
