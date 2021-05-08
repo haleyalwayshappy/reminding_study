@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,6 +23,7 @@
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 
 </head>
 
@@ -193,7 +193,7 @@
         </ul>
       </div>
 
-      <div class="container">
+      <div class="container" id ="containerPort">
         <!-- 포트폴리오 리스트 -->
         <div class="filterItem music">
           <div class="image">
@@ -243,7 +243,7 @@
           <div class="text">포트폴리오 상세설명</div>
         </div>
 
-        <div class="filterItem music">
+        <div class="filterItem android music">
           <div class="image">
             <div class="overlay"><i class="far fa-image"></i></div>
             <img src="./images/music_pf3.jpg" alt="" />
@@ -337,9 +337,9 @@
   <div id="portfolioModal" class="modal">
     <span class="close" id="modalClose">&times;</span>
 
-    <div class="container">
+    <div class="container"  id ="modalContainer">
 
-      <div id="modalVideo">video</div>
+      <div id="modalVideo" class="modal-video"></div>
       <div id="modalMain" class="modal-main">main</div>
       <div id="modalSub" class="modal-sub">sub</div>
       <div id="modalText" class="modal-text">text</div>
@@ -350,6 +350,7 @@
 
   <!-- user script -->
   <script src="portfolio.js"></script>
+  
 </body>
 
 </html>

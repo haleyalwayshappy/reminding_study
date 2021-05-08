@@ -96,6 +96,8 @@ document.getElementById('fifthDot').addEventListener('click', currentImageSlide.
 filterSelection('all');
 
 function filterSelection(id) {
+
+
   var x, i;
   x = document.getElementsByClassName('listItem');
   for (i = 0; i < x.length; i++) {
@@ -103,9 +105,13 @@ function filterSelection(id) {
   }
 
   addClass(document.getElementById(id), 'active');
-  
+
   x = document.getElementsByClassName('filterItem');
-  if (id == 'all') id = '';
+
+  if (id == 'all') {
+    id = '';
+  }
+
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], 'show');
     if (x[i].className.indexOf(id) > -1) {
@@ -120,14 +126,19 @@ function addClass(element, name) {
   }
 }
 
+
+
 function removeClass(element, name) {
   var arr;
-  arr = element.className.split("");
+  arr = element.className.split(" ");
+
   while (arr.indexOf(name) > -1) {
     arr.splice(arr.indexOf(name), 1);
   }
-  element.className = arr.join("");
+  element.className = arr.join(' ');
 }
+
+
 
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
 document.getElementById('android').addEventListener('click', filterSelection.bind(null, 'android'));
@@ -138,58 +149,117 @@ document.getElementById('music').addEventListener('click', filterSelection.bind(
 function viewPortfolio(event) {
   var polyNode = event.target;
 
-  if (polyNode.tagName.toLowerCase() == 'i') {
-    polyNode = polyNode.parentNode;
-  }
+  // if (polyNode.tagName.toLowerCase() == 'i') {
+  //   polyNode = polyNode.parentNode;
+  // }
+  /********* */
 
-  var overlayNode = polyNode;
-  var videoNode = overlayNode.nextElementSibling;
+  var imgNode = polyNode.parentNode;
 
-  var itemNode = overlayNode.parentNode;
-  var mainNode = itemNode.nextElementSibling;
-  var subNode = mainNode.nextElementSibling;
-  var textNode = subNode.nextElementSibling;
+  var imgNodePar = imgNode.parentNode;
+  var par = imgNodePar.childNodes;
 
-  document.getElementById('modalVideo').src = videoNode.src;
+  //console.log("...")
+  //console.log(par[3].childNodes[1]); //iframe
+
+  var videoNode = par[3].childNodes[1].cloneNode(true);
+
+  var copy = videoNode.cloneNode(true);
+  console.log(">>");
+  console.log(copy)
+
+  var mainNode = par[5];
+  var subNode = par[7];
+  var textNode = par[9];
+
+
+  // var itemNode = overlayNode.parentNode;
+  // var videoNode = overlayNode.parentNode.nextElementSibling;
+  // console.log(videoNode);
+  // var mainNode = videoNode.nextElementSibling;
+  // var subNode = mainNode.nextElementSibling;
+  // var textNode = subNode.nextElementSibling;
+  console.log(",,,");
+  console.log(document.getElementById('modalVideo'));
+
+  document.getElementById('modalVideo').appendChild(videoNode);
   document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
   document.getElementById('modalSub').innerHTML = subNode.innerHTML;
   document.getElementById('modalText').innerHTML = textNode.innerHTML;
 
- document.getElementById('portfolioModal').style.display='block';
+  /***********/
+
+  document.getElementById('portfolioModal').style.display = 'block';
+
+
+
+
+  //모달 닫기 
+
+  // $('#modalClose').on('click', function () { //레이어 닫을때
+  //   $('#portfolioModal').hide();
+  //   $('#modalMain').empty();
+  // });
+  document.getElementById('modalClose').addEventListener("click", function () {
+
+    document.getElementById('portfolioModal').style.display = 'none';
+
+    var modalVideoTemp = document.querySelector('#modalVideo');
+    //console.log(modalVideoTemp)
+    var modalMainTemp = document.querySelector('#modalMain');
+    var modalSubTemp = document.querySelector('#modalSub');
+    var modalTextTemp = document.querySelector('#modalText');
+    // test= document.getElementById('modalVideo').childNodes[1];
+    // console.log(test);
+    // test.remove();
+
+    //modalVideoTemp.removeChild(modalVideoTemp.childNodes[0]);
+
+    document.getElementById('modalContainer').removeChild(modalVideoTemp);
+    document.getElementById('modalContainer').removeChild(modalMainTemp);
+    document.getElementById('modalContainer').removeChild(modalSubTemp);
+    document.getElementById('modalContainer').removeChild(modalTextTemp);
+
+    //document.getElementById('modalContainer').appendChild(modalVideoTemp);
+
+    //document.querySelector('#modalContainer #modalVideo').appendChild(copy);
+    //document.querySelector('#modalContainer #modalVideo').childNodes[0].style.display='none';
+    
+    document.getElementById('modalContainer').appendChild(modalVideoTemp);
+    document.getElementById('modalContainer').appendChild(modalMainTemp);
+    document.getElementById('modalContainer').appendChild(modalSubTemp);
+    document.getElementById('modalContainer').appendChild(modalTextTemp);
+
+    
+
+  });
+
+
+
 }
 
 
 var filterItems = document.getElementsByClassName('overlay');
 
 for (var i = 0; i < filterItems.length; i++) {
+
   filterItems[i].addEventListener('click', viewPortfolio);
 }
 
-$('#modalClose').on('click', function(){ //레이어 닫을때
-  $('#portfolioModal').hide();
-  $('#modalMain').empty();  
-});
-
-// X표시를 눌렀을때 실행되는 코드
-// document.getElementById('modalClose').addEventListener('click', function () {
-//  document.getElementById('portfolioModal').style.display = 'none';
-//  });
-
-
 
 /*NAVBAR ANCHOR */
-function moveTo(id){
-  if(id=='brand'){
-    window.scrollTo(0,0);
-  }else{
-    window.scrollTo(0,document.getElementById(id).offsetTop-70);
+function moveTo(id) {
+  if (id == 'brand') {
+    window.scrollTo(0, 0);
+  } else {
+    window.scrollTo(0, document.getElementById(id).offsetTop - 70);
   }
   document.getElementById('menu').classList.remove('show');
 
 }
 
-document.getElementById('navbarBrand').addEventListener('click',moveTo.bind(null,'brand'));
-document.getElementById('navbarAbout').addEventListener('click',moveTo.bind(null,'about'));
-document.getElementById('navbarService').addEventListener('click',moveTo.bind(null,'service'));
-document.getElementById('navbarPortfolio').addEventListener('click',moveTo.bind(null,'portfolio'));
-document.getElementById('navbarContact').addEventListener('click',moveTo.bind(null,'contact'));
+document.getElementById('navbarBrand').addEventListener('click', moveTo.bind(null, 'brand'));
+document.getElementById('navbarAbout').addEventListener('click', moveTo.bind(null, 'about'));
+document.getElementById('navbarService').addEventListener('click', moveTo.bind(null, 'service'));
+document.getElementById('navbarPortfolio').addEventListener('click', moveTo.bind(null, 'portfolio'));
+document.getElementById('navbarContact').addEventListener('click', moveTo.bind(null, 'contact'));

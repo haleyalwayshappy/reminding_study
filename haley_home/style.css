@@ -197,7 +197,7 @@ ul {
 
 /* WELCOME AREA */
 .welcome-area {
-  padding: 100px 0 0 0;
+  padding: 40px 0 0 0;
   height: auto;
 }
 
@@ -501,7 +501,6 @@ margin-right: 10px;
 
 .portfolio-area>.container>.filterItem {
   display: none;
-
   width: calc(100%-40px);
   margin: 20px;
   text-align: center;
@@ -614,13 +613,13 @@ margin-right: 10px;
   height: auto;
 }
 
-#portfolioModal>.container>iframe {
+#portfolioModal>.container>.modal-video{
   width: calc(100%-40px);
   padding: 20px;
 }
 
 @media (min-width: 992px) {
-  #portfolioModal>.container>iframe {
+  #portfolioModal>.container>.modal-video{
     max-width: 700px;
   }
 }
