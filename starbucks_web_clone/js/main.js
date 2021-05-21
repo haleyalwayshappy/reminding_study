@@ -30,17 +30,27 @@ window.addEventListener('scroll', _.throttle(function () {
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
-
     });
-
   } else {
     //배지 보여주기
     // 기본 js -> badgeEl.style.display='block';
     gsap.to(badgeEl, .6, {
       opacity: 1,
-      display:'block'
-
+      display: 'block'
     });
   }
 }, 300));
 // _.throttle(함수, 시간)
+
+
+
+// VISUAL SECTION 
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+  // gsap.to(요소,지속시간,옵션 );
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7, //0.7 -> 1.4 -> 2.1 -> 2.8
+    opacity: 1
+  });
+});
