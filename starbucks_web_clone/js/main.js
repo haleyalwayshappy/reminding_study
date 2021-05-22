@@ -44,7 +44,7 @@ window.addEventListener('scroll', _.throttle(function () {
 
 
 
-// VISUAL SECTION 
+// VISUAL SECTION 비주얼 이미지 순서대로 솨라락
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
@@ -55,4 +55,9 @@ fadeEls.forEach(function (fadeEl, index) {
   });
 });
 
-new Swiper();
+// 공지사항 글씨가 자동으로 솨라락 new Swiper(선택자, 옵션)
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop:true
+});

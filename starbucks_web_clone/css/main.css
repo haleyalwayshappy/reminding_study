@@ -407,9 +407,19 @@ header .badges .badge {
 }
 
 .notice .notice-line .inner__left .swiper-container {
-  background-color: orange;
+
   flex-grow: 1;
   height: 62px;
+}
+
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
 }
 
 .notice .notice-line .inner__left .notice-line__more {
@@ -454,3 +464,10 @@ header .badges .badge {
   font-size: 30px;
 
 }
+
+.notice .promotion {
+  height:693px;
+  background-color:#f6f5ef;
+}
+
+.notice .promotion .swiper-container { }
