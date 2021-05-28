@@ -59,5 +59,31 @@ fadeEls.forEach(function (fadeEl, index) {
 new Swiper('.notice-line .swiper-container', {
   direction: 'vertical',
   autoplay: true,
-  loop:true
+  loop: true
+});
+
+new Swiper('.promotion .swiper-container', {
+  slidesPerView: 3, //한번에 보여줄 슬라이드 개수
+  spaceBetween: 10,
+  centeredSlides: true, //1번슬라이드 가운데에 보이기
+  loop: true,
+  // autoplay:{
+  //   delay:5000
+  // },
+  pagination: {
+    el: '.promotion .swiper-pagination', //페이지 번호 요소 선택자
+    clickable: true // 사용자의 페이지 번호 요소 제어 기능 여부 
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+  }
+});
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+
+promotionToggleBtn.addEventListener('click', function () {
+  isHidePromotion = !isHidePromotion
 });
