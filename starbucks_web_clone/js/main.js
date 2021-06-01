@@ -86,11 +86,24 @@ let isHidePromotion = false;
 
 promotionToggleBtn.addEventListener('click', function () {
   isHidePromotion = !isHidePromotion
-  if(isHidePromotion){
-//숨김처리!
-promotionEl.classList.add('hide'); 
-  }else{
+  if (isHidePromotion) {
+    //숨김처리!
+    promotionEl.classList.add('hide');
+  } else {
     //false 일 때 -> 보임처리  
-    promotionEl.classList.remove('hide'); 
+    promotionEl.classList.remove('hide');
   }
 });
+
+function floatingObject(selector) {
+  // gsap.to(요소, 시간 , 옵션);
+  gsap.to(selector, 1, {
+    
+    y: 20,
+    repeat: -1,
+    yoyo: true,
+    ease:Power1.easeInOut,
+    delay:1
+  });
+}
+floationgObject('.floating');
