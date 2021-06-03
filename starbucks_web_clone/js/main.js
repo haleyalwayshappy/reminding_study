@@ -152,7 +152,7 @@ function floatingObject(selector, delay, size) {
   gsap.to(
     selector, // 선택자
     random(1.5, 2.5), // 애니메이션 동작 시간
-    {
+    {  // 옵셥
       delay: random(0, delay), // 얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정.
       y: size, // `transform: translateY(수치);`와 같음. 수직으로 얼마나 움직일지 설정.
       repeat: -1, // 몇 번 반복하는지를 설정, `-1`은 무한 반복.
