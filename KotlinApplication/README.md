@@ -39,8 +39,8 @@ Kotlin
       var point1 : Double = 3.4
 
  Variable or Value?
-    - 1. 변하지 않는 값이라면 Value
-    - 2. 변동될지도 모른다면 -> 일단 Value로 해놓고 나중에 Variable로 바꾸는 게 좋다
+    1. 변하지 않는 값이라면 Value. 
+    1. 변동될지도 모른다면 -> 일단 Value로 해놓고 나중에 Variable로 바꾸는 게 좋다</br>
       고는 하는데 나는 잘 모르겠다.
 
 04. Function
@@ -49,8 +49,8 @@ Kotlin
     - y = x + 2
 
     - 함수를 선언하는 방법
-      fun 함수명 (변수명 : 타입, 변수명 : 타입 ---) : 반환형 {
-      함수  내용
-      return 반환값
+      fun 함수명 (변수명 : 타입, 변수명 : 타입 ---) : 반환형 {</br>
+      함수  내용</br>
+      return 반환값</br>
       }
     
