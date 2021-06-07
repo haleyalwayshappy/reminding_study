@@ -2,6 +2,9 @@
  /* font-family: 'Lato', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Roboto', sans-serif; */
+@import 'common';
+@import 'common.scss';
+
 
  body {
    font-family: 'Lato', sans-serif;
@@ -17,7 +20,10 @@ font-family: 'Roboto', sans-serif; */
 
  a {
    text-decoration: none;
+ }
 
+ ul {
+   list-style: none;
  }
 
  /* INNER */
@@ -106,7 +112,7 @@ font-family: 'Roboto', sans-serif; */
    height: 120px;
  }
 
- header .logo {
+ header .inner .logo {
    height: 100px;
    position: absolute;
    display: none;
@@ -117,7 +123,7 @@ font-family: 'Roboto', sans-serif; */
 
  }
 
- header .logo img {
+ header .inner .logo img {
    height: 100%;
    background-color: aqua;
  }
@@ -129,8 +135,11 @@ font-family: 'Roboto', sans-serif; */
    right: 0;
  }
 
- header .main-menu .menu{
-   position: flex;
-  display: flex;
-  
+ header .main-menu ul.menu {
+   font-family: 'Roboto', sans-serif;
+   display: flex;
+
+
  }
+
+ 

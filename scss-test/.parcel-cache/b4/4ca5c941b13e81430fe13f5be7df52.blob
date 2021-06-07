@@ -1,0 +1,29 @@
+.container {
+  width: 200px;
+  height: 100px;
+  display: flex;
+}
+.container .box1 {
+  background-color: royalblue;
+}
+.container .box2 {
+  background-color: royalblue;
+}
+.container .box3 {
+  background-color: royalblue;
+}
+.container .box4 {
+  background-color: royalblue;
+}
+.container .box5 {
+  background-color: royalblue;
+}
+.container .box6 {
+  background-color: royalblue;
+}
+.container .box7 {
+  background-color: royalblue;
+}
+.container .box8 {
+  background-color: royalblue;
+}

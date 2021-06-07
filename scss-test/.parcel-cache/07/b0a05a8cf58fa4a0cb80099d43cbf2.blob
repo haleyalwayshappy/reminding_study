@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/index.HASH_REF_018db93862fa12a059426423c5ebeb1d.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="box1">mix</div>
+    <div class="box2">light</div>
+    <div class="box3">darker</div>
+    <div class="box4">saturate</div>
+    <div class="box5">deesaturate</div>
+    <div class="box6">grayscale</div>
+    <div class="box7">invert</div>
+    <div class="box8">rgba</div>
+  </div>
+</body>
+</html><script src="/index.HASH_REF_1cf92b8ac789bf0c8bd4b6d53ebff041.js"></script>

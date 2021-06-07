@@ -1,0 +1,77 @@
+.container {
+  width: 1000px;
+  height: 1000px;
+  padding: 13px;
+  margin-right: 10px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .box {
+  background-color: purple;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box1 {
+  background-color: #c00040;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box2 {
+  background-color: #ff1aff;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box3 {
+  background-color: black;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box4 {
+  background-color: purple;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box5 {
+  background-color: #6d136d;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box6 {
+  background-color: #404040;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+  color: #fff;
+}
+.container .box7 {
+  background-color: #7fff7f;
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box8 {
+  background-color: rgba(128, 0, 128, 0.5);
+  width: 100px;
+  height: 100px;
+  padding: 13px;
+  margin-right: 10px;
+}

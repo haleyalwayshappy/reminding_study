@@ -1,0 +1,75 @@
+.container {
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+  background-color: gray;
+  justify-content: space-around;
+}
+.container .box1 {
+  background-color: #804000;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box2 {
+  background-color: #1aff1a;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box3 {
+  background-color: black;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box4 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box5 {
+  background-color: #136d13;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box6 {
+  background-color: #404040;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box7 {
+  background-color: #ff7fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+.container .box8 {
+  background-color: rgba(0, 128, 0, 0.5);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 13px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=index.HASH_REF_018db93862fa12a059426423c5ebeb1d.css.map */
