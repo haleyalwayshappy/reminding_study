@@ -1,85 +1,10 @@
-.container {
-  $color: purple;
+// @import "./sub.scss"
+@import "./sub", "./sub2";
 
-  @mixin center($size:100px) {
-    width: $size;
-    height: $size;
-    padding: 13px;
-    margin-right: 10px;
+$color: royalblue;
+
+.container{
+  h1{
+    color:$color;
   }
-
-  width: 800px;
-  height: 400px;
-  background-color: #efefef;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-  .box {
-    //오리지널
-    $color: purple;
-    background-color: $color;
-    @include center;
-  }
-
-  .box1 {
-    //mix
-    $color: purple;
-    background-color: mix($color, red);
-    @include center;
-  }
-
-  .box2 {
-    // lighten
-    $color: purple;
-    background-color: lighten($color, 30%);
-    @include center;
-  }
-
-  .box3 {
-    //darken
-    $color: purple;
-    background-color: darken($color, 80%);
-    color: #fff;
-    @include center;
-  }
-
-  .box4 {
-    //saturate
-    $color: purple;
-    background-color: saturate($color,30%);
-    color: #fff;
-    @include center;
-  }
-
-  .box5 {
-    //desaturat
-    $color: purple;
-    background-color: desaturate($color, 30%);
-    color: #fff;
-    @include center;
-  }
-
-  .box6 {
-    //grayscale
-    $color: purple;
-    background-color: grayscale($color);
-    @include center;
-    color: #fff;
-  }
-
-  .box7 {
-    //invert
-    $color: purple;
-    background-color: invert($color);
-    @include center;
-  }
-
-  .box8 {
-    //rgba
-    $color: purple;
-    background-color: rgba($color, .5);
-    @include center;
-  }
-
 }

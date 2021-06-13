@@ -1,0 +1,69 @@
+.container {
+  background-color: orange;
+  width: 600px;
+  height: 500px;
+
+
+}
+
+.container .item {
+  width: 100%;
+  height:auto;
+background-color: blue;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container .item .item1 {
+
+  background-color: rgb(250, 130, 130);
+  margin: 3px;
+
+}
+
+.container .item .item2 {
+  background-color: rgb(130, 250, 144);
+  margin: 3px;
+}
+
+.container .item .item3 {
+  background-color: rgb(130, 134, 250);
+  margin: 3px;
+}
+
+.container .item .item4 {
+  background-color: rgb(250, 130, 250);
+  margin: 3px;
+}
+
+.container .item .item5 {
+  background-color: rgb(130, 158, 250);
+  margin: 3px;
+}
+
+.container .item .item6 {
+  background-color: rgb(250, 242, 130);
+  margin: 3px;
+}
+
+.container .item .item7 {
+  background-color: rgb(130, 250, 240);
+  margin: 3px;
+}
+
+.container .item .item8 {
+  background-color: rgb(130, 250, 130);
+  margin: 3px;
+}
+
+.container .item .item9 {
+  background-color: rgb(83, 200, 242);
+  margin: 3px;
+}
+
+.container .item .item10 {
+  background-color: rgb(87, 60, 207);
+  margin: 3px;
+}
